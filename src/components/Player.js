@@ -61,7 +61,7 @@ const Player = ({
     );
   };
   return (
-    <div className="player">
+    <div className="player" onKeyDown={playSongHandler}>
       <div className="time-control">
         <p>{getTime(songInfo.currentTime)}</p>
         <div
