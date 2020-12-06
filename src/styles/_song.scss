@@ -1,0 +1,19 @@
+.song-container {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  img {
+    width: 20%;
+    border-radius: 50%;
+    margin-top: 2rem;
+    transition: "transform 1s cubic-bezier(0.6, 0.6, 0.59, 0.61) 0s ";
+  }
+  h2 {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+}
