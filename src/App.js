@@ -3,7 +3,8 @@ import Player from "./components/Player";
 import Song from "./components/Song";
 import Library from "./components/Library";
 import "./styles/app.scss";
-import data from "./util";
+import data from "./data";
+import Nav from "./components/Nav";
 
 function App() {
   // Ref ( used to acces html tags (<==> const ele = document.getelementby...))
@@ -43,17 +44,22 @@ function App() {
     animationPercentage: 0,
     rotationDegree: 0,
   });
+  const [libraryStatus, setLibraryStatus] = useState(false);
 
   return (
     <div className="App">
+      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song songInfo={songInfo} currentSong={currentSong} />
       <Player
         audioRef={audioRef}
+        songs={songs}
         songInfo={songInfo}
         setSongInfo={setSongInfo}
         setIsPlaying={setIsPlaying}
         isPlaying={isPlaying}
         currentSong={currentSong}
+        setCurrentSong={setCurrentSong}
+        setSongs={setSongs}
       />
       <Library
         audioRef={audioRef}
@@ -62,6 +68,7 @@ function App() {
         setCurrentSong={setCurrentSong}
         currentSong={currentSong}
         isPlaying={isPlaying}
+        libraryStatus={libraryStatus}
       />
       <audio
         onTimeUpdate={timeUpdateHandler}

@@ -6,7 +6,7 @@ const Song = ({ currentSong, songInfo }) => {
       <img
         style={{
           transform: `rotate(${songInfo.rotationDegree}deg)`,
-          transition: "transform 1s cubic-bezier(0.6, 0.6, 0.59, 0.61) 0s ",
+          transition: "transform 1s ease-out ",
         }}
         src={currentSong.cover}
         alt={currentSong.name}
