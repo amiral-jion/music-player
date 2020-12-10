@@ -27,6 +27,7 @@
   }
   &:hover {
     background: rgb(212, 233, 247);
+    transition: all 0.5s ease-out;
   }
   .song-description {
     padding-left: 1rem;
@@ -64,4 +65,9 @@
 .active-library {
   transform: translateX(0%);
   opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
 }
